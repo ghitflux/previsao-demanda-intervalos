@@ -129,5 +129,33 @@ def test_bloco_para_o_site_segue_o_contrato():
         assert set(serie["nome"]) == idiomas and len(serie["pontos"]) <= 80
         assert all(0 <= valor <= 1 for _, valor in serie["pontos"])
         assert all(len(serie["rotulos"][idioma]) == len(serie["pontos"]) for idioma in idiomas)
+    # Gráficos extras: de 3 a 5, mesmo formato, com leitura nos três idiomas e dentro dos limites do site.
+    extras = bloco["graficos_extras"]
+    assert 3 <= len(extras) <= 5
+    for extra in extras:
+        assert extra["tipo"] in {"linhas", "barras", "pontos"}
+        for chave in ("titulo", "eixo_x", "eixo_y", "leitura"):
+            assert set(extra[chave]) == idiomas and all(texto.strip() for texto in extra[chave].values()), chave
+        assert all(len(texto) <= 90 for texto in extra["titulo"].values()), extra["titulo"]
+        assert extra["formato_x"] in {"numero", "percentual", "data", "moeda"}
+        assert extra["formato_y"] in {"numero", "percentual", "data", "moeda"}
+        assert 1 <= len(extra["series"]) <= 4
+        limite = 300 if extra["tipo"] == "pontos" else 80
+        for serie in extra["series"]:
+            assert serie["papel"] in {"principal", "base", "alternativa", "neutro"}
+            assert set(serie["nome"]) == idiomas
+            assert 1 <= len(serie["pontos"]) <= limite
+            assert all(len(ponto) == 2 and np.isfinite(ponto[1]) for ponto in serie["pontos"])
+            if extra["tipo"] == "barras":
+                assert all(isinstance(ponto[0], str) for ponto in serie["pontos"])
+                assert all(len(serie["rotulos"][idioma]) == len(serie["pontos"]) for idioma in idiomas)
+            if extra["formato_x"] == "data":
+                assert all(pd.Timestamp(ponto[0]).strftime("%Y-%m-%d") == ponto[0] for ponto in serie["pontos"])
+        if "faixa" in extra:
+            assert extra["tipo"] == "linhas"
+            faixa = extra["faixa"]
+            assert 0 <= faixa["serie"] < len(extra["series"])
+            assert len(faixa["inferior"]) == len(faixa["superior"]) <= 80
+            assert all(i[1] <= s[1] for i, s in zip(faixa["inferior"], faixa["superior"]))
     # Vírgula decimal em português e espanhol, ponto em inglês.
     assert "," in bloco["dados"]["pt"] and "," in bloco["dados"]["es"] and "." in bloco["dados"]["en"].rstrip(".")

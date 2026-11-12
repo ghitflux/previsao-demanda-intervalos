@@ -1,0 +1,3 @@
+# O hash do extrato é calculado sobre o texto com fim de linha LF: mantém LF em qualquer sistema.
+data/*.csv text eol=lf
+data/*.sha256 text eol=lf

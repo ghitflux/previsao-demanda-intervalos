@@ -1,0 +1,3541 @@
+{
+  "base": {
+    "artigos": 10,
+    "semanas": 590,
+    "primeira_semana": "2015-07-06",
+    "ultima_semana": "2026-10-19",
+    "visualizacoes_no_periodo": 20863288,
+    "origens_no_backtest": 427,
+    "origens_de_aquecimento": 104,
+    "origens_avaliadas": 323,
+    "primeira_origem_avaliada": "2020-06-29",
+    "ultima_origem_avaliada": "2026-08-31",
+    "previsoes_avaliadas_por_modelo": 25840,
+    "horizonte_max": 8,
+    "bloco_do_bootstrap": 13,
+    "repeticoes_do_bootstrap": 2000,
+    "reajuste_dos_modelos_em_semanas": 13
+  },
+  "configuracao": {
+    "horizonte_max": 8,
+    "primeira_origem": 156,
+    "origens_de_aquecimento": 104,
+    "niveis": [
+      0.8,
+      0.95
+    ],
+    "gama_da_aci": 0.02,
+    "minimo_de_calibracao": 30,
+    "semanas_de_evento": [
+      0,
+      1
+    ],
+    "bloco_do_bootstrap": 13,
+    "repeticoes_do_bootstrap": 2000,
+    "semente": 42,
+    "reajuste_dos_modelos": 13,
+    "parametros_do_gradient_boosting": {
+      "objective": "l1",
+      "learning_rate": 0.1,
+      "num_leaves": 15,
+      "min_data_in_leaf": 5,
+      "max_bin": 63,
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "feature_fraction": 0.8,
+      "seed": 42,
+      "num_threads": 1,
+      "deterministic": true,
+      "force_row_wise": true,
+      "verbose": -1,
+      "arvores": 100
+    },
+    "artigos": {
+      "Black_Friday": {
+        "rotulo": "Black Friday",
+        "eventos": [
+          "black_friday"
+        ]
+      },
+      "Dia_das_Mães": {
+        "rotulo": "Dia das Mães",
+        "eventos": [
+          "dia_das_maes"
+        ]
+      },
+      "Dia_dos_Pais": {
+        "rotulo": "Dia dos Pais",
+        "eventos": [
+          "dia_dos_pais"
+        ]
+      },
+      "Dia_dos_Namorados": {
+        "rotulo": "Dia dos Namorados",
+        "eventos": [
+          "sao_valentim",
+          "dia_dos_namorados"
+        ]
+      },
+      "Natal": {
+        "rotulo": "Natal",
+        "eventos": [
+          "natal"
+        ]
+      },
+      "Páscoa": {
+        "rotulo": "Páscoa",
+        "eventos": [
+          "pascoa"
+        ]
+      },
+      "Carnaval": {
+        "rotulo": "Carnaval",
+        "eventos": [
+          "carnaval"
+        ]
+      },
+      "Festa_junina": {
+        "rotulo": "Festa junina",
+        "eventos": [
+          "sao_joao"
+        ]
+      },
+      "Imposto_de_renda": {
+        "rotulo": "Imposto de renda",
+        "eventos": []
+      },
+      "Exame_Nacional_do_Ensino_Médio": {
+        "rotulo": "Enem",
+        "eventos": []
+      }
+    }
+  },
+  "achados": {
+    "reducao_do_erro_gbm": 0.3103869026298133,
+    "reducao_do_erro_gbm_inf": 0.24673510852220926,
+    "reducao_do_erro_gbm_sup": 0.38570987211207997,
+    "reducao_do_erro_ets": 0.14113863647657687,
+    "reducao_do_erro_ets_inf": 0.05247335273777942,
+    "reducao_do_erro_ets_sup": 0.21667326951343313,
+    "artigos_em_que_o_gbm_erra_menos": 9,
+    "artigos_em_empate_gbm": 1,
+    "artigos_em_que_o_gbm_erra_mais": 0,
+    "horizontes_em_que_o_ets_empata": [
+      6,
+      7,
+      8
+    ],
+    "cobertura_80_parametrico": 0.7766253869969041,
+    "cobertura_80_parametrico_evento": 0.40114285714285713,
+    "cobertura_80_parametrico_demais": 0.8013335353841491,
+    "fator_80_parametrico": 1.6541745243131782,
+    "fator_80_parametrico_evento": 1.6488138645263881,
+    "fator_80_parametrico_demais": 1.6528085511599984,
+    "infinitos_80_parametrico": 0.0,
+    "cobertura_80_conformal": 0.7774767801857585,
+    "cobertura_80_conformal_evento": 0.392,
+    "cobertura_80_conformal_demais": 0.7931504773450523,
+    "fator_80_conformal": 1.663235593403763,
+    "fator_80_conformal_evento": 1.6520553266049225,
+    "fator_80_conformal_demais": 1.6387088862383923,
+    "infinitos_80_conformal": 0.0,
+    "cobertura_80_aci": 0.8011609907120743,
+    "cobertura_80_aci_evento": 0.424,
+    "cobertura_80_aci_demais": 0.8195181088043643,
+    "fator_80_aci": 1.7322789172342161,
+    "fator_80_aci_evento": 1.691133378720579,
+    "fator_80_aci_demais": 1.7069454579528691,
+    "infinitos_80_aci": 0.008978328173374612,
+    "cobertura_80_grupo": 0.775812693498452,
+    "cobertura_80_grupo_evento": 0.8228571428571428,
+    "cobertura_80_grupo_demais": 0.7719351416881346,
+    "fator_80_grupo": 1.634387794571025,
+    "fator_80_grupo_evento": 4.221669117803837,
+    "fator_80_grupo_demais": 1.5907378714523512,
+    "infinitos_80_grupo": 0.0,
+    "cobertura_95_parametrico": 0.9016640866873064,
+    "cobertura_95_parametrico_evento": 0.5714285714285714,
+    "cobertura_95_parametrico_demais": 0.9174622417538011,
+    "fator_95_parametrico": 2.1591921548135686,
+    "fator_95_parametrico_evento": 2.1484999480687743,
+    "fator_95_parametrico_demais": 2.1564658827777436,
+    "infinitos_95_parametrico": 0.0,
+    "cobertura_95_conformal": 0.9464783281733745,
+    "cobertura_95_conformal_evento": 0.6674285714285715,
+    "cobertura_95_conformal_demais": 0.9588321462847906,
+    "fator_95_conformal": 2.773857507636062,
+    "fator_95_conformal_evento": 2.8062535970063958,
+    "fator_95_conformal_demais": 2.8062535970063958,
+    "infinitos_95_conformal": 0.0,
+    "cobertura_95_aci": 0.9503482972136222,
+    "cobertura_95_aci_evento": 0.6788571428571428,
+    "cobertura_95_aci_demais": 0.9637318785674597,
+    "fator_95_aci": 3.2055917517573596,
+    "fator_95_aci_evento": 2.8703874281421538,
+    "fator_95_aci_demais": 3.1851175259625135,
+    "infinitos_95_aci": 0.13026315789473683,
+    "cobertura_95_grupo": 0.9469814241486069,
+    "cobertura_95_grupo_evento": 0.9645714285714285,
+    "cobertura_95_grupo_demais": 0.9463555084103652,
+    "fator_95_grupo": 2.672268032192514,
+    "fator_95_grupo_evento": 16.361224753745724,
+    "fator_95_grupo_demais": 2.58901996661451,
+    "infinitos_95_grupo": 0.0,
+    "previsoes_em_semana_de_evento": 875,
+    "previsoes_nas_demais_semanas": 19797
+  },
+  "comparacao_com_a_linha_de_base": [
+    {
+      "modelo": "sazonal",
+      "nome": "Sazonal ingênua",
+      "mase": 0.72794,
+      "mase_inf": 0.609279,
+      "mase_sup": 0.889423,
+      "wape": 0.646876,
+      "wape_inf": 0.562093,
+      "wape_sup": 0.747144,
+      "razao_para_a_sazonal": 1.0,
+      "razao_inf": 1.0,
+      "razao_sup": 1.0,
+      "veredito": "linha de base"
+    },
+    {
+      "modelo": "media_movel",
+      "nome": "Média móvel",
+      "mase": 1.596027,
+      "mase_inf": 1.337811,
+      "mase_sup": 1.889185,
+      "wape": 1.253341,
+      "wape_inf": 1.151066,
+      "wape_sup": 1.349114,
+      "razao_para_a_sazonal": 2.192527,
+      "razao_inf": 1.892358,
+      "razao_sup": 2.439286,
+      "veredito": "erra mais"
+    },
+    {
+      "modelo": "ets",
+      "nome": "Suavização exponencial",
+      "mase": 0.625199,
+      "mase_inf": 0.531781,
+      "mase_sup": 0.755986,
+      "wape": 0.541637,
+      "wape_inf": 0.504388,
+      "wape_sup": 0.585423,
+      "razao_para_a_sazonal": 0.858861,
+      "razao_inf": 0.783327,
+      "razao_sup": 0.947527,
+      "veredito": "erra menos"
+    },
+    {
+      "modelo": "gbm",
+      "nome": "Gradient boosting",
+      "mase": 0.501997,
+      "mase_inf": 0.403782,
+      "mase_sup": 0.628884,
+      "wape": 0.433494,
+      "wape_inf": 0.389794,
+      "wape_sup": 0.475864,
+      "razao_para_a_sazonal": 0.689613,
+      "razao_inf": 0.61429,
+      "razao_sup": 0.753265,
+      "veredito": "erra menos"
+    }
+  ],
+  "erro_por_horizonte": [
+    {
+      "modelo": "sazonal",
+      "horizonte": 1,
+      "mase": 0.733653,
+      "mase_inf": 0.597293,
+      "mase_sup": 0.905756,
+      "wape": 0.643804,
+      "wape_inf": 0.547424,
+      "wape_sup": 0.753458
+    },
+    {
+      "modelo": "sazonal",
+      "horizonte": 2,
+      "mase": 0.732713,
+      "mase_inf": 0.597224,
+      "mase_sup": 0.904809,
+      "wape": 0.644763,
+      "wape_inf": 0.547872,
+      "wape_sup": 0.753652
+    },
+    {
+      "modelo": "sazonal",
+      "horizonte": 3,
+      "mase": 0.732081,
+      "mase_inf": 0.601057,
+      "mase_sup": 0.904454,
+      "wape": 0.645541,
+      "wape_inf": 0.548028,
+      "wape_sup": 0.751692
+    },
+    {
+      "modelo": "sazonal",
+      "horizonte": 4,
+      "mase": 0.73128,
+      "mase_inf": 0.597599,
+      "mase_sup": 0.902538,
+      "wape": 0.6461,
+      "wape_inf": 0.547873,
+      "wape_sup": 0.751475
+    },
+    {
+      "modelo": "sazonal",
+      "horizonte": 5,
+      "mase": 0.730111,
+      "mase_inf": 0.597002,
+      "mase_sup": 0.899558,
+      "wape": 0.646753,
+      "wape_inf": 0.552787,
+      "wape_sup": 0.752533
+    },
+    {
+      "modelo": "sazonal",
+      "horizonte": 6,
+      "mase": 0.726264,
+      "mase_inf": 0.594097,
+      "mase_sup": 0.906501,
+      "wape": 0.647386,
+      "wape_inf": 0.55467,
+      "wape_sup": 0.755489
+    },
+    {
+      "modelo": "sazonal",
+      "horizonte": 7,
+      "mase": 0.71898,
+      "mase_inf": 0.593144,
+      "mase_sup": 0.900852,
+      "wape": 0.649882,
+      "wape_inf": 0.55435,
+      "wape_sup": 0.760332
+    },
+    {
+      "modelo": "sazonal",
+      "horizonte": 8,
+      "mase": 0.718434,
+      "mase_inf": 0.591339,
+      "mase_sup": 0.900502,
+      "wape": 0.6509,
+      "wape_inf": 0.554037,
+      "wape_sup": 0.763057
+    },
+    {
+      "modelo": "media_movel",
+      "horizonte": 1,
+      "mase": 1.252134,
+      "mase_inf": 1.016074,
+      "mase_sup": 1.507208,
+      "wape": 0.965938,
+      "wape_inf": 0.882665,
+      "wape_sup": 1.025443
+    },
+    {
+      "modelo": "media_movel",
+      "horizonte": 2,
+      "mase": 1.443914,
+      "mase_inf": 1.179943,
+      "mase_sup": 1.741735,
+      "wape": 1.12032,
+      "wape_inf": 1.029051,
+      "wape_sup": 1.194812
+    },
+    {
+      "modelo": "media_movel",
+      "horizonte": 3,
+      "mase": 1.551823,
+      "mase_inf": 1.285133,
+      "mase_sup": 1.861694,
+      "wape": 1.210223,
+      "wape_inf": 1.115391,
+      "wape_sup": 1.295078
+    },
+    {
+      "modelo": "media_movel",
+      "horizonte": 4,
+      "mase": 1.61975,
+      "mase_inf": 1.3498,
+      "mase_sup": 1.921591,
+      "wape": 1.270163,
+      "wape_inf": 1.170198,
+      "wape_sup": 1.368547
+    },
+    {
+      "modelo": "media_movel",
+      "horizonte": 5,
+      "mase": 1.670082,
+      "mase_inf": 1.392571,
+      "mase_sup": 1.9762,
+      "wape": 1.315575,
+      "wape_inf": 1.208914,
+      "wape_sup": 1.427953
+    },
+    {
+      "modelo": "media_movel",
+      "horizonte": 6,
+      "mase": 1.713448,
+      "mase_inf": 1.437296,
+      "mase_sup": 2.015383,
+      "wape": 1.353454,
+      "wape_inf": 1.238963,
+      "wape_sup": 1.481769
+    },
+    {
+      "modelo": "media_movel",
+      "horizonte": 7,
+      "mase": 1.738731,
+      "mase_inf": 1.479404,
+      "mase_sup": 2.061307,
+      "wape": 1.386228,
+      "wape_inf": 1.255834,
+      "wape_sup": 1.524958
+    },
+    {
+      "modelo": "media_movel",
+      "horizonte": 8,
+      "mase": 1.778334,
+      "mase_inf": 1.523665,
+      "mase_sup": 2.092868,
+      "wape": 1.411253,
+      "wape_inf": 1.268695,
+      "wape_sup": 1.569597
+    },
+    {
+      "modelo": "ets",
+      "horizonte": 1,
+      "mase": 0.540589,
+      "mase_inf": 0.434584,
+      "mase_sup": 0.677748,
+      "wape": 0.460903,
+      "wape_inf": 0.414688,
+      "wape_sup": 0.508439
+    },
+    {
+      "modelo": "ets",
+      "horizonte": 2,
+      "mase": 0.596495,
+      "mase_inf": 0.485639,
+      "mase_sup": 0.743486,
+      "wape": 0.532999,
+      "wape_inf": 0.481224,
+      "wape_sup": 0.585713
+    },
+    {
+      "modelo": "ets",
+      "horizonte": 3,
+      "mase": 0.614862,
+      "mase_inf": 0.503494,
+      "mase_sup": 0.763748,
+      "wape": 0.540645,
+      "wape_inf": 0.496222,
+      "wape_sup": 0.590914
+    },
+    {
+      "modelo": "ets",
+      "horizonte": 4,
+      "mase": 0.630876,
+      "mase_inf": 0.521225,
+      "mase_sup": 0.769571,
+      "wape": 0.539233,
+      "wape_inf": 0.497464,
+      "wape_sup": 0.589402
+    },
+    {
+      "modelo": "ets",
+      "horizonte": 5,
+      "mase": 0.643654,
+      "mase_inf": 0.540476,
+      "mase_sup": 0.779053,
+      "wape": 0.543144,
+      "wape_inf": 0.502492,
+      "wape_sup": 0.594853
+    },
+    {
+      "modelo": "ets",
+      "horizonte": 6,
+      "mase": 0.650854,
+      "mase_inf": 0.547602,
+      "mase_sup": 0.788527,
+      "wape": 0.554112,
+      "wape_inf": 0.512155,
+      "wape_sup": 0.610844
+    },
+    {
+      "modelo": "ets",
+      "horizonte": 7,
+      "mase": 0.656762,
+      "mase_inf": 0.557914,
+      "mase_sup": 0.805965,
+      "wape": 0.578832,
+      "wape_inf": 0.530234,
+      "wape_sup": 0.641276
+    },
+    {
+      "modelo": "ets",
+      "horizonte": 8,
+      "mase": 0.667501,
+      "mase_inf": 0.567313,
+      "mase_sup": 0.813344,
+      "wape": 0.584816,
+      "wape_inf": 0.531957,
+      "wape_sup": 0.649059
+    },
+    {
+      "modelo": "gbm",
+      "horizonte": 1,
+      "mase": 0.411252,
+      "mase_inf": 0.317683,
+      "mase_sup": 0.533855,
+      "wape": 0.35194,
+      "wape_inf": 0.301932,
+      "wape_sup": 0.402855
+    },
+    {
+      "modelo": "gbm",
+      "horizonte": 2,
+      "mase": 0.485243,
+      "mase_inf": 0.374342,
+      "mase_sup": 0.630083,
+      "wape": 0.412698,
+      "wape_inf": 0.36402,
+      "wape_sup": 0.458077
+    },
+    {
+      "modelo": "gbm",
+      "horizonte": 3,
+      "mase": 0.508736,
+      "mase_inf": 0.395662,
+      "mase_sup": 0.650022,
+      "wape": 0.428184,
+      "wape_inf": 0.381763,
+      "wape_sup": 0.470901
+    },
+    {
+      "modelo": "gbm",
+      "horizonte": 4,
+      "mase": 0.517198,
+      "mase_inf": 0.407051,
+      "mase_sup": 0.658797,
+      "wape": 0.440147,
+      "wape_inf": 0.39126,
+      "wape_sup": 0.484348
+    },
+    {
+      "modelo": "gbm",
+      "horizonte": 5,
+      "mase": 0.521765,
+      "mase_inf": 0.412712,
+      "mase_sup": 0.658605,
+      "wape": 0.45022,
+      "wape_inf": 0.396951,
+      "wape_sup": 0.499983
+    },
+    {
+      "modelo": "gbm",
+      "horizonte": 6,
+      "mase": 0.520771,
+      "mase_inf": 0.410855,
+      "mase_sup": 0.659836,
+      "wape": 0.454864,
+      "wape_inf": 0.399438,
+      "wape_sup": 0.511406
+    },
+    {
+      "modelo": "gbm",
+      "horizonte": 7,
+      "mase": 0.519988,
+      "mase_inf": 0.417399,
+      "mase_sup": 0.670747,
+      "wape": 0.460576,
+      "wape_inf": 0.408322,
+      "wape_sup": 0.512182
+    },
+    {
+      "modelo": "gbm",
+      "horizonte": 8,
+      "mase": 0.531021,
+      "mase_inf": 0.428232,
+      "mase_sup": 0.683382,
+      "wape": 0.470808,
+      "wape_inf": 0.418353,
+      "wape_sup": 0.517693
+    }
+  ],
+  "razao_por_horizonte": {
+    "gbm": [
+      {
+        "horizonte": 1,
+        "razao": 0.560554,
+        "razao_inf": 0.48258,
+        "razao_sup": 0.629106
+      },
+      {
+        "horizonte": 2,
+        "razao": 0.662255,
+        "razao_inf": 0.569994,
+        "razao_sup": 0.736942
+      },
+      {
+        "horizonte": 3,
+        "razao": 0.694917,
+        "razao_inf": 0.599551,
+        "razao_sup": 0.769401
+      },
+      {
+        "horizonte": 4,
+        "razao": 0.70725,
+        "razao_inf": 0.621621,
+        "razao_sup": 0.781044
+      },
+      {
+        "horizonte": 5,
+        "razao": 0.714638,
+        "razao_inf": 0.629949,
+        "razao_sup": 0.784492
+      },
+      {
+        "horizonte": 6,
+        "razao": 0.717054,
+        "razao_inf": 0.636411,
+        "razao_sup": 0.784379
+      },
+      {
+        "horizonte": 7,
+        "razao": 0.72323,
+        "razao_inf": 0.637566,
+        "razao_sup": 0.803157
+      },
+      {
+        "horizonte": 8,
+        "razao": 0.739136,
+        "razao_inf": 0.655624,
+        "razao_sup": 0.820428
+      }
+    ],
+    "ets": [
+      {
+        "horizonte": 1,
+        "razao": 0.736846,
+        "razao_inf": 0.653276,
+        "razao_sup": 0.829131
+      },
+      {
+        "horizonte": 2,
+        "razao": 0.814092,
+        "razao_inf": 0.731659,
+        "razao_sup": 0.912123
+      },
+      {
+        "horizonte": 3,
+        "razao": 0.839883,
+        "razao_inf": 0.756215,
+        "razao_sup": 0.941128
+      },
+      {
+        "horizonte": 4,
+        "razao": 0.862701,
+        "razao_inf": 0.782974,
+        "razao_sup": 0.960416
+      },
+      {
+        "horizonte": 5,
+        "razao": 0.881583,
+        "razao_inf": 0.797824,
+        "razao_sup": 0.983421
+      },
+      {
+        "horizonte": 6,
+        "razao": 0.896166,
+        "razao_inf": 0.801995,
+        "razao_sup": 1.012695
+      },
+      {
+        "horizonte": 7,
+        "razao": 0.913464,
+        "razao_inf": 0.819157,
+        "razao_sup": 1.030494
+      },
+      {
+        "horizonte": 8,
+        "razao": 0.929105,
+        "razao_inf": 0.837487,
+        "razao_sup": 1.040893
+      }
+    ]
+  },
+  "erro_por_artigo": [
+    {
+      "artigo": "Black Friday",
+      "tem_data_calculavel": true,
+      "mase_sazonal": 0.457081,
+      "mase_media_movel": 1.21863,
+      "mase_ets": 0.491974,
+      "mase_gbm": 0.33254,
+      "razao_gbm": 0.72753,
+      "razao_gbm_inf": 0.58638,
+      "razao_gbm_sup": 0.941053,
+      "razao_ets": 1.076339,
+      "razao_ets_inf": 0.814712,
+      "razao_ets_sup": 1.483321
+    },
+    {
+      "artigo": "Dia das Mães",
+      "tem_data_calculavel": true,
+      "mase_sazonal": 1.42227,
+      "mase_media_movel": 3.388622,
+      "mase_ets": 0.926584,
+      "mase_gbm": 0.910349,
+      "razao_gbm": 0.640067,
+      "razao_gbm_inf": 0.400368,
+      "razao_gbm_sup": 0.881535,
+      "razao_ets": 0.651483,
+      "razao_ets_inf": 0.519448,
+      "razao_ets_sup": 0.755108
+    },
+    {
+      "artigo": "Dia dos Pais",
+      "tem_data_calculavel": true,
+      "mase_sazonal": 1.838861,
+      "mase_media_movel": 4.029194,
+      "mase_ets": 1.56347,
+      "mase_gbm": 1.409792,
+      "razao_gbm": 0.766666,
+      "razao_gbm_inf": 0.671434,
+      "razao_gbm_sup": 0.855741,
+      "razao_ets": 0.850238,
+      "razao_ets_inf": 0.705312,
+      "razao_ets_sup": 1.049885
+    },
+    {
+      "artigo": "Dia dos Namorados",
+      "tem_data_calculavel": true,
+      "mase_sazonal": 0.647135,
+      "mase_media_movel": 1.922384,
+      "mase_ets": 0.76054,
+      "mase_gbm": 0.634502,
+      "razao_gbm": 0.980478,
+      "razao_gbm_inf": 0.775705,
+      "razao_gbm_sup": 1.292128,
+      "razao_ets": 1.175241,
+      "razao_ets_inf": 0.919686,
+      "razao_ets_sup": 1.549311
+    },
+    {
+      "artigo": "Natal",
+      "tem_data_calculavel": true,
+      "mase_sazonal": 0.871973,
+      "mase_media_movel": 2.696671,
+      "mase_ets": 0.91639,
+      "mase_gbm": 0.584105,
+      "razao_gbm": 0.669865,
+      "razao_gbm_inf": 0.485544,
+      "razao_gbm_sup": 0.872917,
+      "razao_ets": 1.050938,
+      "razao_ets_inf": 0.737096,
+      "razao_ets_sup": 1.410178
+    },
+    {
+      "artigo": "Páscoa",
+      "tem_data_calculavel": true,
+      "mase_sazonal": 0.478498,
+      "mase_media_movel": 0.605752,
+      "mase_ets": 0.320155,
+      "mase_gbm": 0.235879,
+      "razao_gbm": 0.492958,
+      "razao_gbm_inf": 0.380781,
+      "razao_gbm_sup": 0.610366,
+      "razao_ets": 0.669083,
+      "razao_ets_inf": 0.561089,
+      "razao_ets_sup": 0.816127
+    },
+    {
+      "artigo": "Carnaval",
+      "tem_data_calculavel": true,
+      "mase_sazonal": 0.404307,
+      "mase_media_movel": 0.497061,
+      "mase_ets": 0.28085,
+      "mase_gbm": 0.243024,
+      "razao_gbm": 0.601088,
+      "razao_gbm_inf": 0.49245,
+      "razao_gbm_sup": 0.747542,
+      "razao_ets": 0.694645,
+      "razao_ets_inf": 0.493603,
+      "razao_ets_sup": 0.954356
+    },
+    {
+      "artigo": "Festa junina",
+      "tem_data_calculavel": true,
+      "mase_sazonal": 0.273845,
+      "mase_media_movel": 1.06927,
+      "mase_ets": 0.405469,
+      "mase_gbm": 0.179603,
+      "razao_gbm": 0.655859,
+      "razao_gbm_inf": 0.48166,
+      "razao_gbm_sup": 0.878931,
+      "razao_ets": 1.480653,
+      "razao_ets_inf": 1.067173,
+      "razao_ets_sup": 1.986474
+    },
+    {
+      "artigo": "Imposto de renda",
+      "tem_data_calculavel": false,
+      "mase_sazonal": 0.551332,
+      "mase_media_movel": 0.242433,
+      "mase_ets": 0.250322,
+      "mase_gbm": 0.23913,
+      "razao_gbm": 0.433732,
+      "razao_gbm_inf": 0.324406,
+      "razao_gbm_sup": 0.520632,
+      "razao_ets": 0.454032,
+      "razao_ets_inf": 0.315316,
+      "razao_ets_sup": 0.622256
+    },
+    {
+      "artigo": "Enem",
+      "tem_data_calculavel": false,
+      "mase_sazonal": 0.334094,
+      "mase_media_movel": 0.290254,
+      "mase_ets": 0.336238,
+      "mase_gbm": 0.251043,
+      "razao_gbm": 0.751414,
+      "razao_gbm_inf": 0.651297,
+      "razao_gbm_sup": 0.874646,
+      "razao_ets": 1.006417,
+      "razao_ets_inf": 0.711897,
+      "razao_ets_sup": 1.512639
+    }
+  ],
+  "cobertura_dos_intervalos": [
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "horizonte": 0,
+      "cobertura": 0.776625,
+      "cobertura_inf": 0.745809,
+      "cobertura_sup": 0.799926,
+      "fator_mediano": 1.654175,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "horizonte": 1,
+      "cobertura": 0.818266,
+      "cobertura_inf": 0.788545,
+      "cobertura_sup": 0.840248,
+      "fator_mediano": 1.478984,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "horizonte": 2,
+      "cobertura": 0.78483,
+      "cobertura_inf": 0.746741,
+      "cobertura_sup": 0.813313,
+      "fator_mediano": 1.575052,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "horizonte": 3,
+      "cobertura": 0.772755,
+      "cobertura_inf": 0.740248,
+      "cobertura_sup": 0.798762,
+      "fator_mediano": 1.602947,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "horizonte": 4,
+      "cobertura": 0.764706,
+      "cobertura_inf": 0.727856,
+      "cobertura_sup": 0.790728,
+      "fator_mediano": 1.641432,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "horizonte": 5,
+      "cobertura": 0.766873,
+      "cobertura_inf": 0.732817,
+      "cobertura_sup": 0.791339,
+      "fator_mediano": 1.671536,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "horizonte": 6,
+      "cobertura": 0.76935,
+      "cobertura_inf": 0.734675,
+      "cobertura_sup": 0.794118,
+      "fator_mediano": 1.699832,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "horizonte": 7,
+      "cobertura": 0.769659,
+      "cobertura_inf": 0.73808,
+      "cobertura_sup": 0.791958,
+      "fator_mediano": 1.742342,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "horizonte": 8,
+      "cobertura": 0.766563,
+      "cobertura_inf": 0.737152,
+      "cobertura_sup": 0.789474,
+      "fator_mediano": 1.798616,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "horizonte": 0,
+      "cobertura": 0.777477,
+      "cobertura_inf": 0.745082,
+      "cobertura_sup": 0.801703,
+      "fator_mediano": 1.663236,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "horizonte": 1,
+      "cobertura": 0.788235,
+      "cobertura_inf": 0.755108,
+      "cobertura_sup": 0.81394,
+      "fator_mediano": 1.406098,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "horizonte": 2,
+      "cobertura": 0.779567,
+      "cobertura_inf": 0.742415,
+      "cobertura_sup": 0.808669,
+      "fator_mediano": 1.551902,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "horizonte": 3,
+      "cobertura": 0.772755,
+      "cobertura_inf": 0.734977,
+      "cobertura_sup": 0.801238,
+      "fator_mediano": 1.602067,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "horizonte": 4,
+      "cobertura": 0.76935,
+      "cobertura_inf": 0.731579,
+      "cobertura_sup": 0.796293,
+      "fator_mediano": 1.633384,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "horizonte": 5,
+      "cobertura": 0.772755,
+      "cobertura_inf": 0.739009,
+      "cobertura_sup": 0.798762,
+      "fator_mediano": 1.705145,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "horizonte": 6,
+      "cobertura": 0.777399,
+      "cobertura_inf": 0.743963,
+      "cobertura_sup": 0.802175,
+      "fator_mediano": 1.760871,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "horizonte": 7,
+      "cobertura": 0.77709,
+      "cobertura_inf": 0.746122,
+      "cobertura_sup": 0.802477,
+      "fator_mediano": 1.805996,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "horizonte": 8,
+      "cobertura": 0.782663,
+      "cobertura_inf": 0.752005,
+      "cobertura_sup": 0.804644,
+      "fator_mediano": 1.883392,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "horizonte": 0,
+      "cobertura": 0.801161,
+      "cobertura_inf": 0.770975,
+      "cobertura_sup": 0.821558,
+      "fator_mediano": 1.732279,
+      "intervalos_infinitos": 0.008978
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "horizonte": 1,
+      "cobertura": 0.801548,
+      "cobertura_inf": 0.76904,
+      "cobertura_sup": 0.824768,
+      "fator_mediano": 1.445012,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "horizonte": 2,
+      "cobertura": 0.800929,
+      "cobertura_inf": 0.767802,
+      "cobertura_sup": 0.825093,
+      "fator_mediano": 1.591153,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "horizonte": 3,
+      "cobertura": 0.803096,
+      "cobertura_inf": 0.768731,
+      "cobertura_sup": 0.824768,
+      "fator_mediano": 1.694973,
+      "intervalos_infinitos": 0.00031
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "horizonte": 4,
+      "cobertura": 0.802477,
+      "cobertura_inf": 0.768421,
+      "cobertura_sup": 0.824149,
+      "fator_mediano": 1.718296,
+      "intervalos_infinitos": 0.000619
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "horizonte": 5,
+      "cobertura": 0.803096,
+      "cobertura_inf": 0.76904,
+      "cobertura_sup": 0.825395,
+      "fator_mediano": 1.802714,
+      "intervalos_infinitos": 0.010217
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "horizonte": 6,
+      "cobertura": 0.799381,
+      "cobertura_inf": 0.767183,
+      "cobertura_sup": 0.820441,
+      "fator_mediano": 1.869208,
+      "intervalos_infinitos": 0.017337
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "horizonte": 7,
+      "cobertura": 0.799381,
+      "cobertura_inf": 0.769652,
+      "cobertura_sup": 0.820433,
+      "fator_mediano": 1.947435,
+      "intervalos_infinitos": 0.023839
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "horizonte": 8,
+      "cobertura": 0.799381,
+      "cobertura_inf": 0.769659,
+      "cobertura_sup": 0.821362,
+      "fator_mediano": 2.014384,
+      "intervalos_infinitos": 0.019505
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "horizonte": 0,
+      "cobertura": 0.775813,
+      "cobertura_inf": 0.742878,
+      "cobertura_sup": 0.800543,
+      "fator_mediano": 1.634388,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "horizonte": 1,
+      "cobertura": 0.785759,
+      "cobertura_inf": 0.751084,
+      "cobertura_sup": 0.812384,
+      "fator_mediano": 1.42361,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "horizonte": 2,
+      "cobertura": 0.773065,
+      "cobertura_inf": 0.738073,
+      "cobertura_sup": 0.800619,
+      "fator_mediano": 1.504478,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "horizonte": 3,
+      "cobertura": 0.770279,
+      "cobertura_inf": 0.731262,
+      "cobertura_sup": 0.797531,
+      "fator_mediano": 1.559056,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "horizonte": 4,
+      "cobertura": 0.770279,
+      "cobertura_inf": 0.733127,
+      "cobertura_sup": 0.796285,
+      "fator_mediano": 1.596571,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "horizonte": 5,
+      "cobertura": 0.771207,
+      "cobertura_inf": 0.734985,
+      "cobertura_sup": 0.798142,
+      "fator_mediano": 1.663746,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "horizonte": 6,
+      "cobertura": 0.77678,
+      "cobertura_inf": 0.743034,
+      "cobertura_sup": 0.801246,
+      "fator_mediano": 1.739979,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "horizonte": 7,
+      "cobertura": 0.77709,
+      "cobertura_inf": 0.745193,
+      "cobertura_sup": 0.803413,
+      "fator_mediano": 1.765754,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "horizonte": 8,
+      "cobertura": 0.782043,
+      "cobertura_inf": 0.751385,
+      "cobertura_sup": 0.804644,
+      "fator_mediano": 1.853181,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "horizonte": 0,
+      "cobertura": 0.901664,
+      "cobertura_inf": 0.881268,
+      "cobertura_sup": 0.91676,
+      "fator_mediano": 2.159192,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "horizonte": 1,
+      "cobertura": 0.922291,
+      "cobertura_inf": 0.904636,
+      "cobertura_sup": 0.935294,
+      "fator_mediano": 1.819436,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "horizonte": 2,
+      "cobertura": 0.902786,
+      "cobertura_inf": 0.882663,
+      "cobertura_sup": 0.918266,
+      "fator_mediano": 2.003257,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "horizonte": 3,
+      "cobertura": 0.902786,
+      "cobertura_inf": 0.881107,
+      "cobertura_sup": 0.918274,
+      "fator_mediano": 2.057769,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "horizonte": 4,
+      "cobertura": 0.898762,
+      "cobertura_inf": 0.876463,
+      "cobertura_sup": 0.914551,
+      "fator_mediano": 2.133807,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "horizonte": 5,
+      "cobertura": 0.893808,
+      "cobertura_inf": 0.870898,
+      "cobertura_sup": 0.911146,
+      "fator_mediano": 2.193946,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "horizonte": 6,
+      "cobertura": 0.890093,
+      "cobertura_inf": 0.865944,
+      "cobertura_sup": 0.908669,
+      "fator_mediano": 2.251,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "horizonte": 7,
+      "cobertura": 0.898762,
+      "cobertura_inf": 0.875542,
+      "cobertura_sup": 0.916409,
+      "fator_mediano": 2.337661,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "horizonte": 8,
+      "cobertura": 0.904025,
+      "cobertura_inf": 0.881416,
+      "cobertura_sup": 0.920743,
+      "fator_mediano": 2.454114,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "horizonte": 0,
+      "cobertura": 0.946478,
+      "cobertura_inf": 0.931733,
+      "cobertura_sup": 0.956889,
+      "fator_mediano": 2.773858,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "horizonte": 1,
+      "cobertura": 0.951393,
+      "cobertura_inf": 0.939009,
+      "cobertura_sup": 0.96007,
+      "fator_mediano": 2.145325,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "horizonte": 2,
+      "cobertura": 0.948297,
+      "cobertura_inf": 0.934056,
+      "cobertura_sup": 0.957585,
+      "fator_mediano": 2.498516,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "horizonte": 3,
+      "cobertura": 0.948607,
+      "cobertura_inf": 0.933437,
+      "cobertura_sup": 0.959141,
+      "fator_mediano": 2.655196,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "horizonte": 4,
+      "cobertura": 0.94613,
+      "cobertura_inf": 0.930341,
+      "cobertura_sup": 0.956974,
+      "fator_mediano": 2.805861,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "horizonte": 5,
+      "cobertura": 0.94613,
+      "cobertura_inf": 0.93096,
+      "cobertura_sup": 0.956656,
+      "fator_mediano": 2.956091,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "horizonte": 6,
+      "cobertura": 0.945201,
+      "cobertura_inf": 0.928483,
+      "cobertura_sup": 0.957895,
+      "fator_mediano": 3.062157,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "horizonte": 7,
+      "cobertura": 0.942105,
+      "cobertura_inf": 0.923839,
+      "cobertura_sup": 0.954807,
+      "fator_mediano": 3.080893,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "horizonte": 8,
+      "cobertura": 0.943963,
+      "cobertura_inf": 0.925387,
+      "cobertura_sup": 0.957276,
+      "fator_mediano": 3.173329,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "horizonte": 0,
+      "cobertura": 0.950348,
+      "cobertura_inf": 0.93862,
+      "cobertura_sup": 0.957973,
+      "fator_mediano": 3.205592,
+      "intervalos_infinitos": 0.130263
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "horizonte": 1,
+      "cobertura": 0.951393,
+      "cobertura_inf": 0.939319,
+      "cobertura_sup": 0.959752,
+      "fator_mediano": 2.157624,
+      "intervalos_infinitos": 0.014241
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "horizonte": 2,
+      "cobertura": 0.949845,
+      "cobertura_inf": 0.93839,
+      "cobertura_sup": 0.957585,
+      "fator_mediano": 2.767521,
+      "intervalos_infinitos": 0.048607
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "horizonte": 3,
+      "cobertura": 0.950774,
+      "cobertura_inf": 0.937461,
+      "cobertura_sup": 0.960062,
+      "fator_mediano": 3.215939,
+      "intervalos_infinitos": 0.116718
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "horizonte": 4,
+      "cobertura": 0.952941,
+      "cobertura_inf": 0.9387,
+      "cobertura_sup": 0.962848,
+      "fator_mediano": 3.527736,
+      "intervalos_infinitos": 0.147988
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "horizonte": 5,
+      "cobertura": 0.952012,
+      "cobertura_inf": 0.939009,
+      "cobertura_sup": 0.960681,
+      "fator_mediano": 3.631488,
+      "intervalos_infinitos": 0.156966
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "horizonte": 6,
+      "cobertura": 0.948607,
+      "cobertura_inf": 0.934675,
+      "cobertura_sup": 0.957895,
+      "fator_mediano": 3.62313,
+      "intervalos_infinitos": 0.150155
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "horizonte": 7,
+      "cobertura": 0.948297,
+      "cobertura_inf": 0.935596,
+      "cobertura_sup": 0.956656,
+      "fator_mediano": 3.740215,
+      "intervalos_infinitos": 0.164706
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "horizonte": 8,
+      "cobertura": 0.948916,
+      "cobertura_inf": 0.931889,
+      "cobertura_sup": 0.960681,
+      "fator_mediano": 3.888331,
+      "intervalos_infinitos": 0.242724
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "horizonte": 0,
+      "cobertura": 0.946981,
+      "cobertura_inf": 0.931888,
+      "cobertura_sup": 0.957817,
+      "fator_mediano": 2.672268,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "horizonte": 1,
+      "cobertura": 0.952632,
+      "cobertura_inf": 0.940248,
+      "cobertura_sup": 0.962229,
+      "fator_mediano": 2.000204,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "horizonte": 2,
+      "cobertura": 0.951703,
+      "cobertura_inf": 0.936215,
+      "cobertura_sup": 0.961927,
+      "fator_mediano": 2.292712,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "horizonte": 3,
+      "cobertura": 0.949226,
+      "cobertura_inf": 0.934667,
+      "cobertura_sup": 0.959133,
+      "fator_mediano": 2.407604,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "horizonte": 4,
+      "cobertura": 0.944892,
+      "cobertura_inf": 0.928793,
+      "cobertura_sup": 0.956347,
+      "fator_mediano": 2.58902,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "horizonte": 5,
+      "cobertura": 0.943653,
+      "cobertura_inf": 0.926935,
+      "cobertura_sup": 0.955735,
+      "fator_mediano": 2.811925,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "horizonte": 6,
+      "cobertura": 0.943963,
+      "cobertura_inf": 0.926618,
+      "cobertura_sup": 0.956966,
+      "fator_mediano": 2.963712,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "horizonte": 7,
+      "cobertura": 0.944892,
+      "cobertura_inf": 0.927245,
+      "cobertura_sup": 0.958204,
+      "fator_mediano": 2.978236,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "horizonte": 8,
+      "cobertura": 0.944892,
+      "cobertura_inf": 0.925077,
+      "cobertura_sup": 0.959133,
+      "fator_mediano": 3.12725,
+      "intervalos_infinitos": 0.0
+    }
+  ],
+  "cobertura_por_ano": [
+    {
+      "ano": 2020,
+      "parametrico": 0.80787,
+      "conformal": 0.825926,
+      "aci": 0.837037,
+      "grupo": 0.831481,
+      "origens": 27
+    },
+    {
+      "ano": 2021,
+      "parametrico": 0.765385,
+      "conformal": 0.774279,
+      "aci": 0.800481,
+      "grupo": 0.770913,
+      "origens": 52
+    },
+    {
+      "ano": 2022,
+      "parametrico": 0.808413,
+      "conformal": 0.803606,
+      "aci": 0.809615,
+      "grupo": 0.802163,
+      "origens": 52
+    },
+    {
+      "ano": 2023,
+      "parametrico": 0.80024,
+      "conformal": 0.800962,
+      "aci": 0.813462,
+      "grupo": 0.805529,
+      "origens": 52
+    },
+    {
+      "ano": 2024,
+      "parametrico": 0.78066,
+      "conformal": 0.775236,
+      "aci": 0.783019,
+      "grupo": 0.774292,
+      "origens": 53
+    },
+    {
+      "ano": 2025,
+      "parametrico": 0.739423,
+      "conformal": 0.733654,
+      "aci": 0.777885,
+      "grupo": 0.727404,
+      "origens": 52
+    },
+    {
+      "ano": 2026,
+      "parametrico": 0.736071,
+      "conformal": 0.739643,
+      "aci": 0.805714,
+      "grupo": 0.731071,
+      "origens": 35
+    }
+  ],
+  "cobertura_em_eventos": [
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 0,
+      "previsoes": 875,
+      "cobertura": 0.401143,
+      "cobertura_inf": 0.318057,
+      "cobertura_sup": 0.470921,
+      "fator_mediano": 1.648814
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 1,
+      "previsoes": 110,
+      "cobertura": 0.381818,
+      "cobertura_inf": 0.284551,
+      "cobertura_sup": 0.459879,
+      "fator_mediano": 1.501465
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 2,
+      "previsoes": 110,
+      "cobertura": 0.381818,
+      "cobertura_inf": 0.283182,
+      "cobertura_sup": 0.464653,
+      "fator_mediano": 1.583832
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 3,
+      "previsoes": 110,
+      "cobertura": 0.390909,
+      "cobertura_inf": 0.294643,
+      "cobertura_sup": 0.473684,
+      "fator_mediano": 1.613026
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 4,
+      "previsoes": 110,
+      "cobertura": 0.390909,
+      "cobertura_inf": 0.288457,
+      "cobertura_sup": 0.471724,
+      "fator_mediano": 1.638483
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 5,
+      "previsoes": 110,
+      "cobertura": 0.390909,
+      "cobertura_inf": 0.290576,
+      "cobertura_sup": 0.477075,
+      "fator_mediano": 1.668666
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 6,
+      "previsoes": 109,
+      "cobertura": 0.422018,
+      "cobertura_inf": 0.304328,
+      "cobertura_sup": 0.518904,
+      "fator_mediano": 1.681003
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 7,
+      "previsoes": 108,
+      "cobertura": 0.435185,
+      "cobertura_inf": 0.335759,
+      "cobertura_sup": 0.525446,
+      "fator_mediano": 1.719773
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 8,
+      "previsoes": 108,
+      "cobertura": 0.416667,
+      "cobertura_inf": 0.310636,
+      "cobertura_sup": 0.515873,
+      "fator_mediano": 1.774441
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 0,
+      "previsoes": 19797,
+      "cobertura": 0.801334,
+      "cobertura_inf": 0.766388,
+      "cobertura_sup": 0.826296,
+      "fator_mediano": 1.652809
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 1,
+      "previsoes": 2474,
+      "cobertura": 0.852466,
+      "cobertura_inf": 0.824023,
+      "cobertura_sup": 0.872693,
+      "fator_mediano": 1.476566
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 2,
+      "previsoes": 2474,
+      "cobertura": 0.818917,
+      "cobertura_inf": 0.781288,
+      "cobertura_sup": 0.845475,
+      "fator_mediano": 1.568896
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 3,
+      "previsoes": 2474,
+      "cobertura": 0.805174,
+      "cobertura_inf": 0.770722,
+      "cobertura_sup": 0.831723,
+      "fator_mediano": 1.60287
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 4,
+      "previsoes": 2474,
+      "cobertura": 0.795069,
+      "cobertura_inf": 0.75579,
+      "cobertura_sup": 0.821925,
+      "fator_mediano": 1.641626
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 5,
+      "previsoes": 2474,
+      "cobertura": 0.78941,
+      "cobertura_inf": 0.753342,
+      "cobertura_sup": 0.814965,
+      "fator_mediano": 1.672049
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 6,
+      "previsoes": 2475,
+      "cobertura": 0.787071,
+      "cobertura_inf": 0.748267,
+      "cobertura_sup": 0.815807,
+      "fator_mediano": 1.700081
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 7,
+      "previsoes": 2476,
+      "cobertura": 0.783118,
+      "cobertura_inf": 0.742496,
+      "cobertura_sup": 0.812501,
+      "fator_mediano": 1.7496
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 8,
+      "previsoes": 2476,
+      "cobertura": 0.779483,
+      "cobertura_inf": 0.742785,
+      "cobertura_sup": 0.806501,
+      "fator_mediano": 1.799183
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 0,
+      "previsoes": 875,
+      "cobertura": 0.392,
+      "cobertura_inf": 0.314349,
+      "cobertura_sup": 0.464569,
+      "fator_mediano": 1.652055
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 1,
+      "previsoes": 110,
+      "cobertura": 0.336364,
+      "cobertura_inf": 0.25,
+      "cobertura_sup": 0.410256,
+      "fator_mediano": 1.373344
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 2,
+      "previsoes": 110,
+      "cobertura": 0.363636,
+      "cobertura_inf": 0.282247,
+      "cobertura_sup": 0.438776,
+      "fator_mediano": 1.55381
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 3,
+      "previsoes": 110,
+      "cobertura": 0.381818,
+      "cobertura_inf": 0.275207,
+      "cobertura_sup": 0.46789,
+      "fator_mediano": 1.61273
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 4,
+      "previsoes": 110,
+      "cobertura": 0.390909,
+      "cobertura_inf": 0.294118,
+      "cobertura_sup": 0.4706,
+      "fator_mediano": 1.632057
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 5,
+      "previsoes": 110,
+      "cobertura": 0.390909,
+      "cobertura_inf": 0.284399,
+      "cobertura_sup": 0.489612,
+      "fator_mediano": 1.717108
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 6,
+      "previsoes": 109,
+      "cobertura": 0.385321,
+      "cobertura_inf": 0.292035,
+      "cobertura_sup": 0.48149,
+      "fator_mediano": 1.758946
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 7,
+      "previsoes": 108,
+      "cobertura": 0.425926,
+      "cobertura_inf": 0.317283,
+      "cobertura_sup": 0.528938,
+      "fator_mediano": 1.803844
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 8,
+      "previsoes": 108,
+      "cobertura": 0.462963,
+      "cobertura_inf": 0.357782,
+      "cobertura_sup": 0.566402,
+      "fator_mediano": 1.883033
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 0,
+      "previsoes": 19797,
+      "cobertura": 0.79315,
+      "cobertura_inf": 0.756325,
+      "cobertura_sup": 0.819648,
+      "fator_mediano": 1.638709
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 1,
+      "previsoes": 2474,
+      "cobertura": 0.80477,
+      "cobertura_inf": 0.772119,
+      "cobertura_sup": 0.830626,
+      "fator_mediano": 1.344564
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 2,
+      "previsoes": 2474,
+      "cobertura": 0.797494,
+      "cobertura_inf": 0.758605,
+      "cobertura_sup": 0.826632,
+      "fator_mediano": 1.547558
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 3,
+      "previsoes": 2474,
+      "cobertura": 0.791835,
+      "cobertura_inf": 0.752736,
+      "cobertura_sup": 0.820563,
+      "fator_mediano": 1.601635
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 4,
+      "previsoes": 2474,
+      "cobertura": 0.786985,
+      "cobertura_inf": 0.748778,
+      "cobertura_sup": 0.814459,
+      "fator_mediano": 1.622645
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 5,
+      "previsoes": 2474,
+      "cobertura": 0.79426,
+      "cobertura_inf": 0.756791,
+      "cobertura_sup": 0.821171,
+      "fator_mediano": 1.692434
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 6,
+      "previsoes": 2475,
+      "cobertura": 0.789495,
+      "cobertura_inf": 0.749891,
+      "cobertura_sup": 0.817641,
+      "fator_mediano": 1.748498
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 7,
+      "previsoes": 2476,
+      "cobertura": 0.787964,
+      "cobertura_inf": 0.74949,
+      "cobertura_sup": 0.817379,
+      "fator_mediano": 1.792249
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 8,
+      "previsoes": 2476,
+      "cobertura": 0.792407,
+      "cobertura_inf": 0.754778,
+      "cobertura_sup": 0.818218,
+      "fator_mediano": 1.86357
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 0,
+      "previsoes": 875,
+      "cobertura": 0.424,
+      "cobertura_inf": 0.333713,
+      "cobertura_sup": 0.493988,
+      "fator_mediano": 1.691133
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 1,
+      "previsoes": 110,
+      "cobertura": 0.381818,
+      "cobertura_inf": 0.276128,
+      "cobertura_sup": 0.461538,
+      "fator_mediano": 1.449977
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 2,
+      "previsoes": 110,
+      "cobertura": 0.4,
+      "cobertura_inf": 0.300863,
+      "cobertura_sup": 0.471918,
+      "fator_mediano": 1.59726
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 3,
+      "previsoes": 110,
+      "cobertura": 0.427273,
+      "cobertura_inf": 0.320362,
+      "cobertura_sup": 0.504958,
+      "fator_mediano": 1.635466
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 4,
+      "previsoes": 110,
+      "cobertura": 0.4,
+      "cobertura_inf": 0.289468,
+      "cobertura_sup": 0.482773,
+      "fator_mediano": 1.690534
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 5,
+      "previsoes": 110,
+      "cobertura": 0.436364,
+      "cobertura_inf": 0.313248,
+      "cobertura_sup": 0.530439,
+      "fator_mediano": 1.705863
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 6,
+      "previsoes": 109,
+      "cobertura": 0.449541,
+      "cobertura_inf": 0.333333,
+      "cobertura_sup": 0.553197,
+      "fator_mediano": 1.776965
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 7,
+      "previsoes": 108,
+      "cobertura": 0.435185,
+      "cobertura_inf": 0.330189,
+      "cobertura_sup": 0.539133,
+      "fator_mediano": 1.803417
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 8,
+      "previsoes": 108,
+      "cobertura": 0.462963,
+      "cobertura_inf": 0.363636,
+      "cobertura_sup": 0.563518,
+      "fator_mediano": 1.855743
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 0,
+      "previsoes": 19797,
+      "cobertura": 0.819518,
+      "cobertura_inf": 0.786132,
+      "cobertura_sup": 0.840892,
+      "fator_mediano": 1.706945
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 1,
+      "previsoes": 2474,
+      "cobertura": 0.820534,
+      "cobertura_inf": 0.789513,
+      "cobertura_sup": 0.84336,
+      "fator_mediano": 1.399887
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 2,
+      "previsoes": 2474,
+      "cobertura": 0.819725,
+      "cobertura_inf": 0.787433,
+      "cobertura_sup": 0.842011,
+      "fator_mediano": 1.556373
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 3,
+      "previsoes": 2474,
+      "cobertura": 0.820129,
+      "cobertura_inf": 0.785945,
+      "cobertura_sup": 0.841177,
+      "fator_mediano": 1.660108
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 4,
+      "previsoes": 2474,
+      "cobertura": 0.821342,
+      "cobertura_inf": 0.785159,
+      "cobertura_sup": 0.843052,
+      "fator_mediano": 1.685566
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 5,
+      "previsoes": 2474,
+      "cobertura": 0.819725,
+      "cobertura_inf": 0.782678,
+      "cobertura_sup": 0.843361,
+      "fator_mediano": 1.77411
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 6,
+      "previsoes": 2475,
+      "cobertura": 0.81697,
+      "cobertura_inf": 0.778312,
+      "cobertura_sup": 0.841558,
+      "fator_mediano": 1.858513
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 7,
+      "previsoes": 2476,
+      "cobertura": 0.819063,
+      "cobertura_inf": 0.78169,
+      "cobertura_sup": 0.842594,
+      "fator_mediano": 1.921305
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 8,
+      "previsoes": 2476,
+      "cobertura": 0.818659,
+      "cobertura_inf": 0.781173,
+      "cobertura_sup": 0.841158,
+      "fator_mediano": 1.978216
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 0,
+      "previsoes": 875,
+      "cobertura": 0.822857,
+      "cobertura_inf": 0.75357,
+      "cobertura_sup": 0.876951,
+      "fator_mediano": 4.221669
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 1,
+      "previsoes": 110,
+      "cobertura": 0.809091,
+      "cobertura_inf": 0.739581,
+      "cobertura_sup": 0.864086,
+      "fator_mediano": 3.364482
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 2,
+      "previsoes": 110,
+      "cobertura": 0.8,
+      "cobertura_inf": 0.712853,
+      "cobertura_sup": 0.87,
+      "fator_mediano": 5.160352
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 3,
+      "previsoes": 110,
+      "cobertura": 0.845455,
+      "cobertura_inf": 0.752292,
+      "cobertura_sup": 0.920043,
+      "fator_mediano": 6.10802
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 4,
+      "previsoes": 110,
+      "cobertura": 0.827273,
+      "cobertura_inf": 0.73911,
+      "cobertura_sup": 0.895241,
+      "fator_mediano": 5.123499
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 5,
+      "previsoes": 110,
+      "cobertura": 0.845455,
+      "cobertura_inf": 0.761905,
+      "cobertura_sup": 0.908259,
+      "fator_mediano": 4.221669
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 6,
+      "previsoes": 109,
+      "cobertura": 0.834862,
+      "cobertura_inf": 0.744442,
+      "cobertura_sup": 0.908257,
+      "fator_mediano": 4.11372
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 7,
+      "previsoes": 108,
+      "cobertura": 0.824074,
+      "cobertura_inf": 0.75,
+      "cobertura_sup": 0.887234,
+      "fator_mediano": 3.966252
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "recorte": "semana de evento",
+      "horizonte": 8,
+      "previsoes": 108,
+      "cobertura": 0.796296,
+      "cobertura_inf": 0.69998,
+      "cobertura_sup": 0.882979,
+      "fator_mediano": 3.543272
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 0,
+      "previsoes": 19797,
+      "cobertura": 0.771935,
+      "cobertura_inf": 0.733083,
+      "cobertura_sup": 0.799838,
+      "fator_mediano": 1.590738
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 1,
+      "previsoes": 2474,
+      "cobertura": 0.780517,
+      "cobertura_inf": 0.74362,
+      "cobertura_sup": 0.809873,
+      "fator_mediano": 1.322649
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 2,
+      "previsoes": 2474,
+      "cobertura": 0.769604,
+      "cobertura_inf": 0.731752,
+      "cobertura_sup": 0.798712,
+      "fator_mediano": 1.474281
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 3,
+      "previsoes": 2474,
+      "cobertura": 0.767987,
+      "cobertura_inf": 0.725498,
+      "cobertura_sup": 0.798552,
+      "fator_mediano": 1.540924
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 4,
+      "previsoes": 2474,
+      "cobertura": 0.768795,
+      "cobertura_inf": 0.728992,
+      "cobertura_sup": 0.796863,
+      "fator_mediano": 1.573239
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 5,
+      "previsoes": 2474,
+      "cobertura": 0.772029,
+      "cobertura_inf": 0.731375,
+      "cobertura_sup": 0.801693,
+      "fator_mediano": 1.638146
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 6,
+      "previsoes": 2475,
+      "cobertura": 0.768889,
+      "cobertura_inf": 0.727705,
+      "cobertura_sup": 0.797664,
+      "fator_mediano": 1.718773
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 7,
+      "previsoes": 2476,
+      "cobertura": 0.770598,
+      "cobertura_inf": 0.730079,
+      "cobertura_sup": 0.801533,
+      "fator_mediano": 1.73574
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.8,
+      "recorte": "demais semanas",
+      "horizonte": 8,
+      "previsoes": 2476,
+      "cobertura": 0.77706,
+      "cobertura_inf": 0.738509,
+      "cobertura_sup": 0.803224,
+      "fator_mediano": 1.77707
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 0,
+      "previsoes": 875,
+      "cobertura": 0.571429,
+      "cobertura_inf": 0.491279,
+      "cobertura_sup": 0.632521,
+      "fator_mediano": 2.1485
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 1,
+      "previsoes": 110,
+      "cobertura": 0.518182,
+      "cobertura_inf": 0.421053,
+      "cobertura_sup": 0.585592,
+      "fator_mediano": 1.861902
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 2,
+      "previsoes": 110,
+      "cobertura": 0.472727,
+      "cobertura_inf": 0.38523,
+      "cobertura_sup": 0.541302,
+      "fator_mediano": 2.020359
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 3,
+      "previsoes": 110,
+      "cobertura": 0.518182,
+      "cobertura_inf": 0.423077,
+      "cobertura_sup": 0.587719,
+      "fator_mediano": 2.077591
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 4,
+      "previsoes": 110,
+      "cobertura": 0.563636,
+      "cobertura_inf": 0.457439,
+      "cobertura_sup": 0.64349,
+      "fator_mediano": 2.127947
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 5,
+      "previsoes": 110,
+      "cobertura": 0.6,
+      "cobertura_inf": 0.5,
+      "cobertura_sup": 0.677693,
+      "fator_mediano": 2.188189
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 6,
+      "previsoes": 109,
+      "cobertura": 0.623853,
+      "cobertura_inf": 0.517222,
+      "cobertura_sup": 0.715447,
+      "fator_mediano": 2.212979
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 7,
+      "previsoes": 108,
+      "cobertura": 0.62037,
+      "cobertura_inf": 0.526316,
+      "cobertura_sup": 0.711864,
+      "fator_mediano": 2.291512
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 8,
+      "previsoes": 108,
+      "cobertura": 0.657407,
+      "cobertura_inf": 0.565207,
+      "cobertura_sup": 0.745115,
+      "fator_mediano": 2.403846
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 0,
+      "previsoes": 19797,
+      "cobertura": 0.917462,
+      "cobertura_inf": 0.895014,
+      "cobertura_sup": 0.933078,
+      "fator_mediano": 2.156466
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 1,
+      "previsoes": 2474,
+      "cobertura": 0.947049,
+      "cobertura_inf": 0.931465,
+      "cobertura_sup": 0.958048,
+      "fator_mediano": 1.814888
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 2,
+      "previsoes": 2474,
+      "cobertura": 0.932498,
+      "cobertura_inf": 0.914828,
+      "cobertura_sup": 0.944448,
+      "fator_mediano": 1.991294
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 3,
+      "previsoes": 2474,
+      "cobertura": 0.926031,
+      "cobertura_inf": 0.906211,
+      "cobertura_sup": 0.939735,
+      "fator_mediano": 2.057619
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 4,
+      "previsoes": 2474,
+      "cobertura": 0.916734,
+      "cobertura_inf": 0.893539,
+      "cobertura_sup": 0.93304,
+      "fator_mediano": 2.134192
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 5,
+      "previsoes": 2474,
+      "cobertura": 0.905416,
+      "cobertura_inf": 0.878964,
+      "cobertura_sup": 0.925926,
+      "fator_mediano": 2.194977
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 6,
+      "previsoes": 2475,
+      "cobertura": 0.897778,
+      "cobertura_inf": 0.867939,
+      "cobertura_sup": 0.919712,
+      "fator_mediano": 2.251505
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 7,
+      "previsoes": 2476,
+      "cobertura": 0.905493,
+      "cobertura_inf": 0.875498,
+      "cobertura_sup": 0.926791,
+      "fator_mediano": 2.352571
+    },
+    {
+      "metodo": "parametrico",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 8,
+      "previsoes": 2476,
+      "cobertura": 0.908724,
+      "cobertura_inf": 0.879753,
+      "cobertura_sup": 0.928226,
+      "fator_mediano": 2.455297
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 0,
+      "previsoes": 875,
+      "cobertura": 0.667429,
+      "cobertura_inf": 0.594381,
+      "cobertura_sup": 0.728486,
+      "fator_mediano": 2.806254
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 1,
+      "previsoes": 110,
+      "cobertura": 0.554545,
+      "cobertura_inf": 0.461522,
+      "cobertura_sup": 0.617647,
+      "fator_mediano": 2.197079
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 2,
+      "previsoes": 110,
+      "cobertura": 0.563636,
+      "cobertura_inf": 0.479581,
+      "cobertura_sup": 0.630006,
+      "fator_mediano": 2.567147
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 3,
+      "previsoes": 110,
+      "cobertura": 0.618182,
+      "cobertura_inf": 0.515781,
+      "cobertura_sup": 0.697269,
+      "fator_mediano": 2.599057
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 4,
+      "previsoes": 110,
+      "cobertura": 0.690909,
+      "cobertura_inf": 0.593205,
+      "cobertura_sup": 0.768611,
+      "fator_mediano": 2.759257
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 5,
+      "previsoes": 110,
+      "cobertura": 0.718182,
+      "cobertura_inf": 0.629297,
+      "cobertura_sup": 0.787037,
+      "fator_mediano": 2.85377
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 6,
+      "previsoes": 109,
+      "cobertura": 0.743119,
+      "cobertura_inf": 0.647976,
+      "cobertura_sup": 0.825254,
+      "fator_mediano": 3.019529
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 7,
+      "previsoes": 108,
+      "cobertura": 0.722222,
+      "cobertura_inf": 0.622642,
+      "cobertura_sup": 0.811883,
+      "fator_mediano": 2.988203
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 8,
+      "previsoes": 108,
+      "cobertura": 0.731481,
+      "cobertura_inf": 0.65,
+      "cobertura_sup": 0.806122,
+      "fator_mediano": 3.032013
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 0,
+      "previsoes": 19797,
+      "cobertura": 0.958832,
+      "cobertura_inf": 0.943442,
+      "cobertura_sup": 0.969738,
+      "fator_mediano": 2.806254
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 1,
+      "previsoes": 2474,
+      "cobertura": 0.970897,
+      "cobertura_inf": 0.959379,
+      "cobertura_sup": 0.979134,
+      "fator_mediano": 2.145325
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 2,
+      "previsoes": 2474,
+      "cobertura": 0.966451,
+      "cobertura_inf": 0.954637,
+      "cobertura_sup": 0.974751,
+      "fator_mediano": 2.452244
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 3,
+      "previsoes": 2474,
+      "cobertura": 0.965238,
+      "cobertura_inf": 0.951434,
+      "cobertura_sup": 0.975403,
+      "fator_mediano": 2.655196
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 4,
+      "previsoes": 2474,
+      "cobertura": 0.95958,
+      "cobertura_inf": 0.9443,
+      "cobertura_sup": 0.970577,
+      "fator_mediano": 2.805861
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 5,
+      "previsoes": 2474,
+      "cobertura": 0.956346,
+      "cobertura_inf": 0.940071,
+      "cobertura_sup": 0.967846,
+      "fator_mediano": 2.956091
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 6,
+      "previsoes": 2475,
+      "cobertura": 0.953939,
+      "cobertura_inf": 0.934571,
+      "cobertura_sup": 0.968134,
+      "fator_mediano": 3.062157
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 7,
+      "previsoes": 2476,
+      "cobertura": 0.948304,
+      "cobertura_inf": 0.926864,
+      "cobertura_sup": 0.963637,
+      "fator_mediano": 3.016677
+    },
+    {
+      "metodo": "conformal",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 8,
+      "previsoes": 2476,
+      "cobertura": 0.949919,
+      "cobertura_inf": 0.928221,
+      "cobertura_sup": 0.964977,
+      "fator_mediano": 3.185118
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 0,
+      "previsoes": 875,
+      "cobertura": 0.678857,
+      "cobertura_inf": 0.598889,
+      "cobertura_sup": 0.742102,
+      "fator_mediano": 2.870387
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 1,
+      "previsoes": 110,
+      "cobertura": 0.536364,
+      "cobertura_inf": 0.433621,
+      "cobertura_sup": 0.614697,
+      "fator_mediano": 2.066409
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 2,
+      "previsoes": 110,
+      "cobertura": 0.554545,
+      "cobertura_inf": 0.457122,
+      "cobertura_sup": 0.631081,
+      "fator_mediano": 2.518254
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 3,
+      "previsoes": 110,
+      "cobertura": 0.618182,
+      "cobertura_inf": 0.521359,
+      "cobertura_sup": 0.702519,
+      "fator_mediano": 2.685334
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 4,
+      "previsoes": 110,
+      "cobertura": 0.709091,
+      "cobertura_inf": 0.581963,
+      "cobertura_sup": 0.809919,
+      "fator_mediano": 2.899944
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 5,
+      "previsoes": 110,
+      "cobertura": 0.763636,
+      "cobertura_inf": 0.660714,
+      "cobertura_sup": 0.845455,
+      "fator_mediano": 3.350857
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 6,
+      "previsoes": 109,
+      "cobertura": 0.752294,
+      "cobertura_inf": 0.65873,
+      "cobertura_sup": 0.838999,
+      "fator_mediano": 3.22763
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 7,
+      "previsoes": 108,
+      "cobertura": 0.731481,
+      "cobertura_inf": 0.633922,
+      "cobertura_sup": 0.821782,
+      "fator_mediano": 3.270973
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 8,
+      "previsoes": 108,
+      "cobertura": 0.768519,
+      "cobertura_inf": 0.669803,
+      "cobertura_sup": 0.859839,
+      "fator_mediano": 3.435664
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 0,
+      "previsoes": 19797,
+      "cobertura": 0.963732,
+      "cobertura_inf": 0.953759,
+      "cobertura_sup": 0.970578,
+      "fator_mediano": 3.185118
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 1,
+      "previsoes": 2474,
+      "cobertura": 0.969281,
+      "cobertura_inf": 0.958671,
+      "cobertura_sup": 0.977063,
+      "fator_mediano": 2.157624
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 2,
+      "previsoes": 2474,
+      "cobertura": 0.968068,
+      "cobertura_inf": 0.957895,
+      "cobertura_sup": 0.97502,
+      "fator_mediano": 2.767521
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 3,
+      "previsoes": 2474,
+      "cobertura": 0.967259,
+      "cobertura_inf": 0.956275,
+      "cobertura_sup": 0.975354,
+      "fator_mediano": 3.118817
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 4,
+      "previsoes": 2474,
+      "cobertura": 0.966047,
+      "cobertura_inf": 0.954933,
+      "cobertura_sup": 0.973791,
+      "fator_mediano": 3.505387
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 5,
+      "previsoes": 2474,
+      "cobertura": 0.962813,
+      "cobertura_inf": 0.951743,
+      "cobertura_sup": 0.971131,
+      "fator_mediano": 3.695566
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 6,
+      "previsoes": 2475,
+      "cobertura": 0.959596,
+      "cobertura_inf": 0.947069,
+      "cobertura_sup": 0.968338,
+      "fator_mediano": 3.624295
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 7,
+      "previsoes": 2476,
+      "cobertura": 0.958401,
+      "cobertura_inf": 0.947153,
+      "cobertura_sup": 0.966615,
+      "fator_mediano": 3.848231
+    },
+    {
+      "metodo": "aci",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 8,
+      "previsoes": 2476,
+      "cobertura": 0.958401,
+      "cobertura_inf": 0.943042,
+      "cobertura_sup": 0.969843,
+      "fator_mediano": 4.187123
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 0,
+      "previsoes": 875,
+      "cobertura": 0.964571,
+      "cobertura_inf": 0.933521,
+      "cobertura_sup": 0.988482,
+      "fator_mediano": 16.361225
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 1,
+      "previsoes": 110,
+      "cobertura": 0.963636,
+      "cobertura_inf": 0.927268,
+      "cobertura_sup": 0.991379,
+      "fator_mediano": 9.065393
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 2,
+      "previsoes": 110,
+      "cobertura": 0.963636,
+      "cobertura_inf": 0.927998,
+      "cobertura_sup": 0.99115,
+      "fator_mediano": 11.097218
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 3,
+      "previsoes": 110,
+      "cobertura": 0.981818,
+      "cobertura_inf": 0.954128,
+      "cobertura_sup": 1.0,
+      "fator_mediano": 21.466544
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 4,
+      "previsoes": 110,
+      "cobertura": 0.963636,
+      "cobertura_inf": 0.908397,
+      "cobertura_sup": 1.0,
+      "fator_mediano": 22.498371
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 5,
+      "previsoes": 110,
+      "cobertura": 0.954545,
+      "cobertura_inf": 0.898862,
+      "cobertura_sup": 0.991668,
+      "fator_mediano": 17.044191
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 6,
+      "previsoes": 109,
+      "cobertura": 0.963303,
+      "cobertura_inf": 0.921053,
+      "cobertura_sup": 0.991935,
+      "fator_mediano": 17.439834
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 7,
+      "previsoes": 108,
+      "cobertura": 0.953704,
+      "cobertura_inf": 0.911276,
+      "cobertura_sup": 0.990566,
+      "fator_mediano": 15.769859
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "recorte": "semana de evento",
+      "horizonte": 8,
+      "previsoes": 108,
+      "cobertura": 0.972222,
+      "cobertura_inf": 0.940171,
+      "cobertura_sup": 1.0,
+      "fator_mediano": 14.889357
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 0,
+      "previsoes": 19797,
+      "cobertura": 0.946356,
+      "cobertura_inf": 0.927907,
+      "cobertura_sup": 0.958903,
+      "fator_mediano": 2.58902
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 1,
+      "previsoes": 2474,
+      "cobertura": 0.954325,
+      "cobertura_inf": 0.940485,
+      "cobertura_sup": 0.964375,
+      "fator_mediano": 2.000204
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 2,
+      "previsoes": 2474,
+      "cobertura": 0.953112,
+      "cobertura_inf": 0.936912,
+      "cobertura_sup": 0.963871,
+      "fator_mediano": 2.268605
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 3,
+      "previsoes": 2474,
+      "cobertura": 0.949879,
+      "cobertura_inf": 0.934764,
+      "cobertura_sup": 0.960428,
+      "fator_mediano": 2.379547
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 4,
+      "previsoes": 2474,
+      "cobertura": 0.945837,
+      "cobertura_inf": 0.927322,
+      "cobertura_sup": 0.95911,
+      "fator_mediano": 2.58902
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 5,
+      "previsoes": 2474,
+      "cobertura": 0.942603,
+      "cobertura_inf": 0.921894,
+      "cobertura_sup": 0.957192,
+      "fator_mediano": 2.773858
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 6,
+      "previsoes": 2475,
+      "cobertura": 0.942626,
+      "cobertura_inf": 0.920918,
+      "cobertura_sup": 0.958336,
+      "fator_mediano": 2.893704
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 7,
+      "previsoes": 2476,
+      "cobertura": 0.941842,
+      "cobertura_inf": 0.919105,
+      "cobertura_sup": 0.95889,
+      "fator_mediano": 2.927593
+    },
+    {
+      "metodo": "grupo",
+      "nivel": 0.95,
+      "recorte": "demais semanas",
+      "horizonte": 8,
+      "previsoes": 2476,
+      "cobertura": 0.94063,
+      "cobertura_inf": 0.915247,
+      "cobertura_sup": 0.958115,
+      "fator_mediano": 3.004434
+    }
+  ],
+  "conformal_por_modelo": [
+    {
+      "modelo": "sazonal",
+      "metodo": "aci",
+      "nome": "Sazonal ingênua",
+      "cobertura": 0.79106,
+      "cobertura_inf": 0.748334,
+      "cobertura_sup": 0.822177,
+      "fator_mediano": 1.841008,
+      "cobertura_evento": 0.580571,
+      "cobertura_evento_inf": 0.490352,
+      "cobertura_evento_sup": 0.664837,
+      "fator_evento": 1.755798,
+      "fator_demais": 1.765779
+    },
+    {
+      "modelo": "sazonal",
+      "metodo": "grupo",
+      "nome": "Sazonal ingênua",
+      "cobertura": 0.733475,
+      "cobertura_inf": 0.691988,
+      "cobertura_sup": 0.765642,
+      "fator_mediano": 1.734706,
+      "cobertura_evento": 0.802286,
+      "cobertura_evento_inf": 0.711469,
+      "cobertura_evento_sup": 0.876698,
+      "fator_evento": 3.210364,
+      "fator_demais": 1.693878
+    },
+    {
+      "modelo": "media_movel",
+      "metodo": "aci",
+      "nome": "Média móvel",
+      "cobertura": 0.800735,
+      "cobertura_inf": 0.774612,
+      "cobertura_sup": 0.822447,
+      "fator_mediano": 5.464561,
+      "cobertura_evento": 0.24,
+      "cobertura_evento_inf": 0.169922,
+      "cobertura_evento_sup": 0.314517,
+      "fator_evento": 4.790483,
+      "fator_demais": 7.159594
+    },
+    {
+      "modelo": "media_movel",
+      "metodo": "grupo",
+      "nome": "Média móvel",
+      "cobertura": 0.801819,
+      "cobertura_inf": 0.775964,
+      "cobertura_sup": 0.823144,
+      "fator_mediano": 3.384161,
+      "cobertura_evento": 0.865143,
+      "cobertura_evento_inf": 0.822766,
+      "cobertura_evento_sup": 0.905341,
+      "fator_evento": 21.17722,
+      "fator_demais": 4.155923
+    },
+    {
+      "modelo": "ets",
+      "metodo": "aci",
+      "nome": "Suavização exponencial",
+      "cobertura": 0.801161,
+      "cobertura_inf": 0.770975,
+      "cobertura_sup": 0.821558,
+      "fator_mediano": 1.732279,
+      "cobertura_evento": 0.424,
+      "cobertura_evento_inf": 0.333713,
+      "cobertura_evento_sup": 0.493988,
+      "fator_evento": 1.691133,
+      "fator_demais": 1.706945
+    },
+    {
+      "modelo": "ets",
+      "metodo": "grupo",
+      "nome": "Suavização exponencial",
+      "cobertura": 0.775813,
+      "cobertura_inf": 0.742878,
+      "cobertura_sup": 0.800543,
+      "fator_mediano": 1.634388,
+      "cobertura_evento": 0.822857,
+      "cobertura_evento_inf": 0.75357,
+      "cobertura_evento_sup": 0.876951,
+      "fator_evento": 4.221669,
+      "fator_demais": 1.590738
+    },
+    {
+      "modelo": "gbm",
+      "metodo": "aci",
+      "nome": "Gradient boosting",
+      "cobertura": 0.802902,
+      "cobertura_inf": 0.774418,
+      "cobertura_sup": 0.828291,
+      "fator_mediano": 1.58017,
+      "cobertura_evento": 0.609143,
+      "cobertura_evento_inf": 0.529162,
+      "cobertura_evento_sup": 0.68873,
+      "fator_evento": 1.54541,
+      "fator_demais": 1.558849
+    },
+    {
+      "modelo": "gbm",
+      "metodo": "grupo",
+      "nome": "Gradient boosting",
+      "cobertura": 0.790209,
+      "cobertura_inf": 0.761948,
+      "cobertura_sup": 0.815792,
+      "fator_mediano": 1.552008,
+      "cobertura_evento": 0.842286,
+      "cobertura_evento_inf": 0.771472,
+      "cobertura_evento_sup": 0.898717,
+      "fator_evento": 2.875155,
+      "fator_demais": 1.50263
+    }
+  ],
+  "sensibilidade_ao_gama": [
+    {
+      "gama": 0.005,
+      "nivel": 0.8,
+      "cobertura": 0.791138,
+      "cobertura_inf": 0.759671,
+      "cobertura_sup": 0.813317,
+      "fator_mediano": 1.698639,
+      "intervalos_infinitos": 0.0
+    },
+    {
+      "gama": 0.005,
+      "nivel": 0.95,
+      "cobertura": 0.948529,
+      "cobertura_inf": 0.934984,
+      "cobertura_sup": 0.95778,
+      "fator_mediano": 2.978236,
+      "intervalos_infinitos": 0.012926
+    },
+    {
+      "gama": 0.01,
+      "nivel": 0.8,
+      "cobertura": 0.796246,
+      "cobertura_inf": 0.765052,
+      "cobertura_sup": 0.818383,
+      "fator_mediano": 1.713076,
+      "intervalos_infinitos": 0.000348
+    },
+    {
+      "gama": 0.01,
+      "nivel": 0.95,
+      "cobertura": 0.949187,
+      "cobertura_inf": 0.936145,
+      "cobertura_sup": 0.958128,
+      "fator_mediano": 3.054723,
+      "intervalos_infinitos": 0.041834
+    },
+    {
+      "gama": 0.02,
+      "nivel": 0.8,
+      "cobertura": 0.801161,
+      "cobertura_inf": 0.770975,
+      "cobertura_sup": 0.821558,
+      "fator_mediano": 1.732279,
+      "intervalos_infinitos": 0.008978
+    },
+    {
+      "gama": 0.02,
+      "nivel": 0.95,
+      "cobertura": 0.950348,
+      "cobertura_inf": 0.93862,
+      "cobertura_sup": 0.957973,
+      "fator_mediano": 3.205592,
+      "intervalos_infinitos": 0.130263
+    },
+    {
+      "gama": 0.05,
+      "nivel": 0.8,
+      "cobertura": 0.80356,
+      "cobertura_inf": 0.776045,
+      "cobertura_sup": 0.821672,
+      "fator_mediano": 1.739605,
+      "intervalos_infinitos": 0.079992
+    },
+    {
+      "gama": 0.05,
+      "nivel": 0.95,
+      "cobertura": 0.951006,
+      "cobertura_inf": 0.940595,
+      "cobertura_sup": 0.957818,
+      "fator_mediano": 3.681384,
+      "intervalos_infinitos": 0.306889
+    }
+  ],
+  "sensibilidade_a_folha": {
+    "folha_do_estudo": 5,
+    "folha_inicial": 20,
+    "mase_com_a_folha_inicial": 0.5053603484709057,
+    "razao_para_a_sazonal_com_a_folha_inicial": 0.6942339013499338,
+    "razao_inf": 0.6219665757728587,
+    "razao_sup": 0.7544182580241395
+  },
+  "para_o_site": {
+    "numero_chave": {
+      "pt": "80% → 40%",
+      "en": "80% → 40%",
+      "es": "80 % → 40 %"
+    },
+    "pergunta": {
+      "pt": "Quanto interesse vai haver nas próximas semanas, e quanto dá para confiar na previsão?",
+      "en": "How much interest will there be in the coming weeks, and how far can the forecast be trusted?",
+      "es": "¿Cuánto interés habrá en las próximas semanas y hasta dónde se puede confiar en la previsión?"
+    },
+    "resultado": {
+      "pt": "Na média de todas as semanas, o intervalo de 80% entrega quase o que promete: cobre de 78% a 80% dos casos, conforme o método. Na semana da data comemorativa, a que decide a verba, ele cobre só 40%; calibrando essas semanas à parte, a cobertura volta a 82%, com uma faixa que vai da previsão dividida por 4,2 à previsão multiplicada por 4,2.",
+      "en": "Averaged over every week, the 80% interval nearly keeps its promise: it covers 78% to 80% of outcomes, depending on the method. In the holiday week itself, the one that drives the budget, it covers only 40%; calibrating those weeks separately brings coverage back to 82%, with a band that runs from the forecast divided by 4.2 to the forecast multiplied by 4.2.",
+      "es": "En el promedio de todas las semanas, el intervalo del 80 % casi cumple lo que promete: cubre entre el 78 % y el 80 % de los casos, según el método. En la semana de la fecha señalada, la que decide el presupuesto, cubre solo el 40 %; al calibrar esas semanas por separado, la cobertura vuelve al 82 %, con una banda que va de la previsión dividida entre 4,2 a la previsión multiplicada por 4,2."
+    },
+    "detalhe": {
+      "pt": "No erro da previsão em si, o gradient boosting com variáveis de calendário erra 31% menos do que repetir a mesma semana do ano anterior (intervalo de 95%: 25% a 39%). No gráfico, cada par de barras é um jeito de construir o intervalo de 80%: os três primeiros usam praticamente a mesma largura o ano inteiro (a previsão dividida ou multiplicada por cerca de 1,7) e falham justamente no pico.",
+      "en": "On the point forecast, gradient boosting with calendar features cuts the error by 31% compared with simply repeating the same week of the previous year (95% interval: 25% to 39%). In the chart, each pair of bars is one way of building the 80% interval: the first three keep practically the same width all year (the forecast divided or multiplied by about 1.7) and fail exactly at the peak.",
+      "es": "En la previsión puntual, el gradient boosting con variables de calendario comete un 31 % menos de error que repetir la misma semana del año anterior (intervalo del 95 %: 25 % a 39 %). En el gráfico, cada par de barras es una forma de construir el intervalo del 80 %: las tres primeras usan prácticamente el mismo ancho todo el año (la previsión dividida o multiplicada por cerca de 1,7) y fallan justo en el pico."
+    },
+    "dados": {
+      "pt": "Visualizações semanais de 10 artigos da Wikipédia em português, de julho de 2015 a outubro de 2026 (590 semanas, 20,9 milhões de visualizações): um indicador de interesse, não de venda.",
+      "en": "Weekly page views of 10 Portuguese-language Wikipedia articles, July 2015 to October 2026 (590 weeks, 20.9 million views): a proxy for interest, not for sales.",
+      "es": "Visitas semanales de 10 artículos de Wikipedia en portugués, de julio de 2015 a octubre de 2026 (590 semanas, 20,9 millones de visitas): un indicador de interés, no de ventas."
+    },
+    "etiquetas": [
+      "séries temporais",
+      "predição conforme",
+      "backtesting",
+      "LightGBM",
+      "quantificação de incerteza"
+    ],
+    "grafico": {
+      "tipo": "barras",
+      "titulo": {
+        "pt": "Cobertura real do intervalo de 80%, na semana da data comemorativa e nas demais",
+        "en": "Actual coverage of the 80% interval, in holiday weeks and in all other weeks",
+        "es": "Cobertura real del intervalo del 80 %, en la semana de la fecha señalada y en el resto"
+      },
+      "eixo_x": {
+        "pt": "Como o intervalo é construído",
+        "en": "How the interval is built",
+        "es": "Cómo se construye el intervalo"
+      },
+      "eixo_y": {
+        "pt": "Cobertura real (prometido: 80%)",
+        "en": "Actual coverage (promised: 80%)",
+        "es": "Cobertura real (prometido: 80 %)"
+      },
+      "formato_x": "numero",
+      "formato_y": "percentual",
+      "rotulos": {
+        "pt": [
+          "Paramétrico do modelo",
+          "Conformal simples",
+          "Conformal adaptativo",
+          "Conformal por grupo"
+        ],
+        "en": [
+          "Model's parametric",
+          "Split conformal",
+          "Adaptive conformal",
+          "Group conformal"
+        ],
+        "es": [
+          "Paramétrico del modelo",
+          "Conformal simple",
+          "Conformal adaptativo",
+          "Conformal por grupo"
+        ]
+      },
+      "series": [
+        {
+          "nome": {
+            "pt": "Semana da data comemorativa",
+            "en": "Holiday week",
+            "es": "Semana de la fecha señalada"
+          },
+          "papel": "principal",
+          "pontos": [
+            [
+              "Paramétrico do modelo",
+              0.4011
+            ],
+            [
+              "Conformal simples",
+              0.392
+            ],
+            [
+              "Conformal adaptativo",
+              0.424
+            ],
+            [
+              "Conformal por grupo",
+              0.8229
+            ]
+          ],
+          "rotulos": {
+            "pt": [
+              "Paramétrico do modelo",
+              "Conformal simples",
+              "Conformal adaptativo",
+              "Conformal por grupo"
+            ],
+            "en": [
+              "Model's parametric",
+              "Split conformal",
+              "Adaptive conformal",
+              "Group conformal"
+            ],
+            "es": [
+              "Paramétrico del modelo",
+              "Conformal simple",
+              "Conformal adaptativo",
+              "Conformal por grupo"
+            ]
+          }
+        },
+        {
+          "nome": {
+            "pt": "Demais semanas",
+            "en": "All other weeks",
+            "es": "Resto de las semanas"
+          },
+          "papel": "neutro",
+          "pontos": [
+            [
+              "Paramétrico do modelo",
+              0.8013
+            ],
+            [
+              "Conformal simples",
+              0.7932
+            ],
+            [
+              "Conformal adaptativo",
+              0.8195
+            ],
+            [
+              "Conformal por grupo",
+              0.7719
+            ]
+          ],
+          "rotulos": {
+            "pt": [
+              "Paramétrico do modelo",
+              "Conformal simples",
+              "Conformal adaptativo",
+              "Conformal por grupo"
+            ],
+            "en": [
+              "Model's parametric",
+              "Split conformal",
+              "Adaptive conformal",
+              "Group conformal"
+            ],
+            "es": [
+              "Paramétrico del modelo",
+              "Conformal simple",
+              "Conformal adaptativo",
+              "Conformal por grupo"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

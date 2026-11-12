@@ -1,0 +1,34 @@
+[project]
+name = "previsao-demanda"
+version = "0.1.0"
+description = "Quanto interesse vai haver nas próximas semanas, e quanto dá para confiar na previsão? Backtesting por origem móvel e intervalos por predição conforme"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "lightgbm>=4.5",
+    "matplotlib>=3.9",
+    "numpy>=2.0",
+    "pandas>=2.2",
+    "scipy>=1.14",
+    "statsmodels>=0.14.4",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29",
+    "jinja2>=3.1",
+    "nbconvert>=7.16",
+    "nbformat>=5.10",
+    "pytest>=8.3",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/previsao_demanda"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q -p no:cacheprovider"
